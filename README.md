@@ -10,8 +10,21 @@
 ---
 
 ## Project Overview
-A hybrid CNN-KNN model for classifying road surfaces into Dry, Wet, and Muddy categories.
-Achieved **98.31% accuracy** on 10,680 images, outperforming LSTM, Random Forest, ResNet50, and SVM.
+
+A hybrid CNN-KNN model for classifying road surfaces into three categories:
+**Dry, Wet, and Muddy** using deep learning and instance-based classification.
+
+Achieved **98.31% accuracy** on 10,680 images, outperforming LSTM, Random Forest,
+ResNet50, and SVM baselines.
+
+---
+
+## Run the Code Directly in Google Colab
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/22kunal/Road-Surface-Classification-2210991825/blob/main/Source_Code/road_classification_2210991825.ipynb)
+
+> Click the button above to open and run the notebook directly in your browser.
+> No installation required. Use Runtime → Run all to execute.
 
 ---
 
@@ -20,15 +33,7 @@ Achieved **98.31% accuracy** on 10,680 images, outperforming LSTM, Random Forest
 | Folder | Contents |
 |--------|----------|
 | `Report_and_PPT/` | Project report (Word) and presentation (PPT) |
-| `Source_Code/` | Google Colab notebook with full implementation |
-
----
-
-## Run the Code in Google Colab
-
-Click the button below to open and run the notebook directly in Google Colab:
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kunalkumar10/Road-Surface-Classification-2210991825/blob/main/Source_Code/road_classification.ipynb)
+| `Source_Code/` | Google Colab notebook — full CNN-KNN implementation |
 
 ---
 
@@ -36,8 +41,29 @@ Click the button below to open and run the notebook directly in Google Colab:
 
 | Model | Accuracy |
 |-------|----------|
-| **CNN-KNN (Proposed)** | **98.31%** |
+| **CNN-KNN Hybrid (Proposed)** | **98.31%** |
 | Random Forest | 93.44% |
 | ResNet50 | 91.06% |
 | LSTM | 90.56% |
 | SVM | 89.58% |
+
+---
+
+## How to Run
+
+1. Click the **Open in Colab** button above
+2. Go to **Runtime → Change runtime type → T4 GPU**
+3. Click **Runtime → Run all**
+4. Wait ~20 minutes for training to complete
+5. Results, graphs, and confusion matrix will be saved to the `results/` folder
+
+---
+
+## Technologies Used
+
+- Python 3.10
+- TensorFlow 2.x / Keras
+- Scikit-learn
+- Matplotlib / Seaborn
+- Google Colab (T4 GPU)
+- Kaggle Dataset
