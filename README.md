@@ -6,6 +6,26 @@
 **Type:** Research Paper  
 **Supervisor:** Dr. Lalit K Sharma  
 **Department:** Computer Science and Engineering, Chitkara University  
+**Current Status:** Evaluation 3 Submission Complete  
+
+---
+
+## 🚀 Live Demo
+
+**Try the working web app here (permanent link):**
+
+[![Hugging Face](https://img.shields.io/badge/🤗%20Live%20Demo-Hugging%20Face-blue)](https://huggingface.co/spaces/Kunal2226/road-surface-classifier)
+
+🔗 https://huggingface.co/spaces/Kunal2226/road-surface-classifier
+
+> Point your webcam at a road surface OR upload a road image.
+> The CNN+KNN model will classify it as Dry / Wet / Muddy in real time.
+
+---
+
+## Run the Code in Google Colab
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/22kunal/Road-Surface-Classification-2210991825/blob/main/Source%20Code/road_classification_2210991825.ipynb)
 
 ---
 
@@ -21,27 +41,17 @@ outperforming LSTM, Random Forest, ResNet50, and SVM baselines.
 
 ---
 
-## Run the Code Directly in Google Colab
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/22kunal/Road-Surface-Classification-2210991825/blob/main/Source%20Code/road_classification_2210991825.ipynb)
-
-> Click the button above to open the notebook directly in your browser.  
-> No installation required.  
-> Go to **Runtime → Change runtime type → T4 GPU → Run all**
-
----
-
 ## Repository Structure
 Road-Surface-Classification-2210991825/
 │
 ├── Report and PPT/
-│   ├── project_report.docx          ← Full project report
-│   └── project_presentation.pptx   ← Project presentation slides
+│   ├── project_report.docx
+│   └── project_presentation.pptx
 │
 ├── Source Code/
-│   └── road_classification_2210991825.ipynb  ← Colab notebook
+│   └── road_classification_2210991825.ipynb
 │
-└── README.md                        ← This file
+└── README.md
 
 ---
 
@@ -50,9 +60,8 @@ Road-Surface-Classification-2210991825/
 Road surface conditions (Dry, Wet, Muddy) directly affect vehicle safety and
 performance. Autonomous vehicles and ADAS systems need real-time road surface
 awareness to adjust braking distance, traction control, and steering sensitivity.
-Traditional methods are not scalable or robust enough for real-world deployment.
-This project proposes a hybrid CNN-KNN approach that is accurate, automated, and
-computationally efficient.
+This project proposes a hybrid CNN-KNN approach that is accurate, automated,
+and computationally efficient.
 
 ---
 
@@ -60,7 +69,7 @@ computationally efficient.
 
 | Phase | Description |
 |-------|-------------|
-| Phase 1 | Data preparation — 10,680 images, 180x180px, augmentation, 80/20 split |
+| Phase 1 | Data preparation — images, augmentation, 80/20 split |
 | Phase 2 | CNN feature extraction — 4 Conv2D + 4 MaxPool + Dropout + Dense(128) |
 | Phase 3 | KNN classification — FC layer features → KNeighborsClassifier |
 | Phase 4 | Evaluation — Accuracy, Precision, Recall, F1, Confusion Matrix |
@@ -87,14 +96,12 @@ computationally efficient.
 
 ---
 
-## How to Run
+## How to Run Locally
 
-1. Click the **Open in Colab** button above
-2. Go to **Runtime → Change runtime type → T4 GPU → Save**
+1. Click **Open in Colab** button above
+2. Go to **Runtime → Change runtime type → T4 GPU**
 3. Click **Runtime → Run all**
-4. Wait ~20 minutes for dataset download and training
-5. Results, graphs, confusion matrix saved to `results/` folder automatically
-6. Last cell downloads a zip of all results to your computer
+4. Wait ~20 minutes for training to complete
 
 ---
 
@@ -107,16 +114,19 @@ computationally efficient.
 | Scikit-learn | KNN classifier and evaluation metrics |
 | Matplotlib / Seaborn | Graphs and confusion matrix |
 | Google Colab (T4 GPU) | Cloud training environment |
-| Kaggle | Road surface image dataset |
+| Gradio | Web application framework |
+| Hugging Face Spaces | Permanent deployment platform |
 
 ---
 
-## Dataset
+## Live Application
 
-Public road surface image dataset from Kaggle containing images across multiple
-road surface conditions. Organized into 3 classes matching the paper:
-**Dry, Wet, and Muddy**.
+The trained model is deployed as a web application on Hugging Face Spaces.
+Features:
+- 🎥 Real-time webcam classification
+- 📁 Image upload support  
+- 📊 Confidence scores for all 3 classes
+- ⚠️ Safety warnings based on road condition
+- 🌐 Accessible from any browser, any device
 
-Dataset: `hemanthhari/road-surface-dataset`  
-Total images: 10,680  
-Classes: Dry (3,660) | Wet (3,560) | Muddy (3,460)
+🔗 **https://huggingface.co/spaces/Kunal2226/road-surface-classifier**
